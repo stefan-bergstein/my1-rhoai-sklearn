@@ -1,0 +1,10 @@
+site_name: my1-rhoai-sklearn-dsp
+site_description: description
+
+nav:
+  - Introduction: index.md
+  - Notebook: 01_regression_with_scikit-learn.md
+
+plugins:
+  - techdocs-core
+
