@@ -3,6 +3,9 @@ kind: PipelineRun
 metadata:
   generateName: doc-pipe-
   namespace: developer-hub
+  annotations:
+    argocd.argoproj.io/hook: PostSync 
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded  
   finalizers:
     - chains.tekton.dev/pipelinerun
   labels:
