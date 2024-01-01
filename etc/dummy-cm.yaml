@@ -4,6 +4,6 @@ metadata:
   name: dummy
   namespace: developer-hub
 data:
-  test: test
+  test: test5
 binaryData: {}
 immutable: false
