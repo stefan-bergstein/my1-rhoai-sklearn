@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: doc-pipe-
+  namespace: developer-hub
+  finalizers:
+    - chains.tekton.dev/pipelinerun
+  labels:
+    tekton.dev/pipeline: doc-pipe
+spec:
+  params:
+    - name: source-repo
+      value: 'https://github.com/stefan-bergstein/my1-rhoai-sklearn.git'
+    - name: docs-path
+      value: .
+    - name: source-branch
+      value: main
+    - name: entity
+      value: default/Component/my1-rhoai-sklearn-dsp
+  pipelineRef:
+    name: doc-pipe
+  serviceAccountName: pipeline
+  timeouts:
+    pipeline: 1h0m0s
+  workspaces:
+    - name: source-folder
+      persistentVolumeClaim:
+        claimName: doc-pipe-pvc1
