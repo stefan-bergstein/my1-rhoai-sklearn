@@ -4,7 +4,7 @@ site_description: description
 nav:
   - Introduction: index.md
   - Notebook: 01_regression_with_scikit-learn.md
-  - Ende: index.md
+  - Endi: index.md
 
 plugins:
   - techdocs-core
