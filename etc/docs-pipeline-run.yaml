@@ -1,11 +1,11 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  generateName: doc-pipe-
+  generateName: doc-pipe-test
   namespace: developer-hub
   annotations:
-    argocd.argoproj.io/hook: PostSync 
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded  
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation    
   finalizers:
     - chains.tekton.dev/pipelinerun
   labels:
